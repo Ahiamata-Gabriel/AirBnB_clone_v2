@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HBNB</title>
+  </head>
+  <body>
+    {% if (found == 1) %}
+    <h1>State: {{ state }}</h1>
+    <h3>Cities:</h3>
+    <ul>
+      {% for city in array %}
+      <li>{{ city.id }}: <b>{{ city.name }}</b></li>
+      {% endfor %}
+    </ul>
+    {% elif found == 0 %}
+    <h1>States</h1>
+    <ul>
+      {% for state in array %}
+      <li>{{ state.id }}: <b>{{ state.name }}</b></li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <h1>Not found!</h1>
+    {% endif %}
+  </body>
+</html>
